@@ -5,17 +5,21 @@ import MIMIMITranslator from './MIMIMITranslator';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.text = "Escribe lo que quieras";
     this.handleChange = this.handleChange.bind(this);
 
   };
 
+
+
+
   handleChange(event) {
-    let text = event.target.value;
+    this.text = event.target.value;
 
     this.forceUpdate();
-    console.log(text);
 
   }
+
   render() {
     return (
 
